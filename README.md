@@ -37,60 +37,58 @@ The file contains your marked days in JSON format, ensuring your data persists b
 
 ### Prerequisites
 
-Before you begin, ensure you have the necessary system dependencies installed for Tauri. You can find the detailed instructions for macOS on the [official Tauri website](https://tauri.app/v2/guides/getting-started/prerequisites).
+Before you begin, ensure you have the necessary system dependencies installed for Tauri. See the [official Tauri prerequisites guide](https://tauri.app/v2/guides/getting-started/prerequisites) for detailed macOS instructions.
 
-Essentially, you will need:
+You will need:
 *   [Node.js](https://nodejs.org/) (which includes `npm`)
 *   [Rust](https://www.rust-lang.org/tools/install)
 
 ### Installation
 
-1.  **Clone the repository (if applicable):**
-    If this project were on GitHub, you would clone it. For now, just navigate to the project directory.
+1.  **Clone the repository and navigate to the project directory:**
 
-2.  **Install NPM dependencies:**
-    This command installs all the necessary frontend libraries, such as React and `react-calendar`.
+2.  **Install dependencies:**
     ```bash
     npm install
     ```
 
-## How to Run the Application in dev mode
+## Running the Application
 
-To run the application in development mode, execute the following command in your terminal. This will start the Vite development server and launch the native Tauri window. The app will automatically reload if you make any changes to the source code.
+To run the application in development mode, execute the following command. This will start the Vite development server and launch the Tauri window. The app will automatically reload when you make changes to the source code.
 
 ```bash
 npm run tauri dev
 ```
 
-## How to Build the Application
+## Building the Application
 
-To create a standalone, distributable version of the application, run the build command:
+To create a standalone, distributable version of the application, run:
 
 ```bash
 npm run tauri build
 ```
 
-This process will compile the frontend, build the Rust backend, and bundle everything into a native macOS application.
+This will compile the frontend, build the Rust backend, and bundle everything into a native macOS application.
 
-### Build Output Locations
+### Build Output
 
-The build process creates several output formats:
+The build process creates the following outputs:
 
-**macOS App Bundle (Ready to run):**
+**macOS App Bundle:**
 ```
 src-tauri/target/release/bundle/macos/markdays.app/
 ```
 
-**DMG Installer (For distribution):**
+**DMG Installer:**
 ```
 src-tauri/target/release/bundle/dmg/markdays_0.1.0_aarch64.dmg
 ```
 
-### How to Run the Compiled App
+### Running the Built Application
 
-You have several options to run the built application:
+You can run the built application in several ways:
 
-**Option 1: Run the App Bundle Directly**
+**Option 1: Run the App Bundle**
 ```bash
 open src-tauri/target/release/bundle/macos/markdays.app
 ```
@@ -108,4 +106,4 @@ open src-tauri/target/release/bundle/macos/markdays.app
 ### Distribution
 
 - **For personal use**: Use the `.app` bundle directly
-- **For sharing/distribution**: Use the `.dmg` file - it provides a standard macOS installation experience that others can download and install 
+- **For sharing**: Use the `.dmg` file for a standard macOS installation experience 
